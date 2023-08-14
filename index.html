@@ -1,0 +1,71 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Website</title>
+    <link rel="stylesheet" href="style.css">
+ </head>
+ <body> 
+    <div class="background-image"></div>
+
+    <!-- <style>
+       * {
+    padding: 0;
+    margin: 0;
+     }
+      .background-image{
+      background-image: url('./assets/nbg.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100vh;
+    
+    }
+    </style> -->
+
+    <nav>   <!-- NAV BAR-->
+    <div class="main-nav container flex ">  <!-- container flex used to align the list on the right of logo-->
+        <a href="#" onclick="reload()" class="company-logo">    <!-- Anchor tag that contains image-->
+            <img src="./assets/news_2.png" alt="company logo">
+        </a>
+        <div class="nav-links">
+          <ul class="flex">  <!--All the items in one row-->
+              <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>  
+              <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li> 
+              <li class="hover-link nav-item" id="sports" onclick="onNavItemClick('sports')">Sports</li> 
+              <li class="hover-link nav-item" id="Entertainment" onclick="onNavItemClick('Entertainment')">Entertainment</li> 
+              <li class="hover-link nav-item" id="technology" onclick="onNavItemClick('technology')">Technology</li>
+          </ul>
+        </div>
+
+        <div class="search-bar flex">
+            <input id="search-text" type="text" class="news-input" placeholder="e.g. Science">         
+            <button id="search-button" class="search-button">Search</button>
+        </div>
+    </div>
+   
+    </nav> 
+     <main>
+         <div class="cards-container flex container flex" id="cards-container"></div>
+  
+     </main>
+     <template id="template-news-card">  <!--Use template for multiple cards -->
+        <div class="card">
+            <div class="card-header">
+                 <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            </div>
+             <div class="card-content">
+              <h3 id="news-title"> This is the data</h3>
+              <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+              <p class="news-desc" id="news-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum, amet cum. Ad ullam, quam eaque molestias quos ea ab voluptatem.</p>
+                
+             </div>
+            </div>
+
+     </template>
+
+
+
+    <script src="script.js"></script>
+ </body>
+ </html>
